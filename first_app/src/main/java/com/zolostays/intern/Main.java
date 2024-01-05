@@ -6,7 +6,13 @@ package com.zolostays.intern;
 public class Main {
     public static void main(String[] args) {
          
-        System.out.println("Hello and welcome!");
+        System.out.println("Lets learn Variables and conversions!");
+        int intval =  6;
+        float fval = 7;
+
+        fval = intval;
+        System.out.println("Succes" + fval);
+
 
     }
 }
