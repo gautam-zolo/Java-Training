@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to the calculator");
-        float a=5,b=5,result=-1;
-        char op ='+';
+        float a=5,b=0,result=-1;
+        char op ='/';
 
         do{
 
@@ -22,7 +22,16 @@ public class Main {
           }
 
           else if(op =='/'){
-            result = a/b;
+
+            try{
+                result = a/b;
+                break;
+            }
+            catch(ArithmeticException e){
+                System.out.println("Dont use 0 as divisor. ");
+                System.out.println("Error Generated: " + e);
+            }
+
             break;
           }
           else if(op =='x'){
@@ -38,7 +47,6 @@ public class Main {
         }while( op !='+'||op!='-'||op!='%'||op!='x'||op!='/');
 
       System.out.println("The result is: "+result);
-
 
     }
 }
