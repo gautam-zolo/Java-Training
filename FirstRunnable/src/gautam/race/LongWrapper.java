@@ -1,6 +1,7 @@
 package gautam.race;
 
 public class LongWrapper {
+    private final Object key = new Object();
     private long l;
 
     public LongWrapper(long l){
@@ -9,7 +10,10 @@ public class LongWrapper {
     public long getValue(){
         return l;
     }
+
     public void incrementValue(){
-        l++;
+//        synchronized (key){
+            l++;
+//        }
     }
 }

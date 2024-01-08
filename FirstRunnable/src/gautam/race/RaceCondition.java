@@ -15,7 +15,7 @@ public class RaceCondition {
             threads[i] = new Thread(r);
             threads[i].start();
         }
-        
+
         for(Thread t: threads)
             t.join();
 
