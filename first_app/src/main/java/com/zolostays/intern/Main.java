@@ -3,6 +3,8 @@
 
 package com.zolostays.intern;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -50,3 +52,6 @@ public class Main {
 
     }
 }
+
+int year,int month,int day;
+int curDate= LocalDate.of(year,month,day);
