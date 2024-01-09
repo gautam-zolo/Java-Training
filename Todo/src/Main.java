@@ -7,14 +7,12 @@ import java.text.*;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("Welcome to your Todo Application!");
         char op = '0';
         boolean found;
         int id = 0;
         Scanner sc = new Scanner(System.in);
         List<Task> taskList = new ArrayList<>();
-
-        System.out.println("Welcome to your Todo Application!");
-
 
 
         while (op!='g') {
@@ -43,7 +41,7 @@ public class Main {
                     sc.nextLine();
                     System.out.print("Enter Task Title: ");
                     task.title = sc.nextLine();
-//                    sc.nextLine();
+
                     System.out.print("Enter Task Description: ");
                     task.text = sc.nextLine();
 
@@ -128,22 +126,19 @@ public class Main {
                         System.out.println("No Tasks to show ");
                         break;
                     }
-                    System.out.print( " Enter the task's title you are searching for: ");
+                    System.out.print( " Enter the task's keyword you are searching for: ");
                     sc.nextLine();
                     String word = sc.nextLine();
                     found = false;
                     Task T = new Task();
                     for(Task t:taskList){
-                        if(Objects.equals(t.title, word)){
+                        if(t.text.startsWith(word)){
                             T = t;
                             found = true;
-                            break;
+                            T.display();
                         }
                     }
-                    if(found){
-                        System.out.println("Task found!");
-                        T.display();
-                    }else{
+                    if(!found){
                         System.out.println("Task not found!");
                     }
                     break;
