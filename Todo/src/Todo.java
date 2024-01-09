@@ -106,7 +106,7 @@ public class Todo {
             System.out.println("No Tasks to show ");
             return;
         }
-        System.out.print(" Enter the task's keyword you are searching for: ");
+        System.out.print(" Enter the task's  you are searching for: ");
         String word = sc.nextLine();
         found = false;
         Task T = new Task();
